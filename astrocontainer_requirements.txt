@@ -1,0 +1,8 @@
+astropy
+astroquery
+numpy
+scipy
+matplotlib
+ipython
+jupyter
+jupyterlab
