@@ -14,9 +14,9 @@ if [[ -z "$HOST_GID" ]]; then
 fi
 
 addgroup --gid "$HOST_GID" matchinguser
-adduser --uid "$HOST_UID" --gid "$HOST_GID" --gecos "" --disabled-password astrocontainerer
+adduser --uid "$HOST_UID" --gid "$HOST_GID" --gecos "" --disabled-password {{cookiecutter.container_name}}er
 
-cd /home/astrocontainerer
+cd /home/{{cookiecutter.container_name}}
 
 # Drop privileges and execute next container command, or 'bash' if not specified. 
 if [[ $# -gt 0 ]]; then
@@ -24,8 +24,8 @@ if [[ $# -gt 0 ]]; then
         # if first argument is bashroot, go to shell as root
         bash
     else
-        exec sudo -u astrocontainerer -- "$@"
+        exec sudo -u {{cookiecutter.container_name}}er -- "$@"
     fi
 else
-    exec sudo -u astrocontainerer -- bash
+    exec sudo -u {{cookiecutter.container_name}}er -- bash
 fi

@@ -1,0 +1,1 @@
+This directory contains the actual project itself, and is meant to be mounted in docker in its own space

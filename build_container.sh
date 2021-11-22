@@ -1,3 +1,3 @@
 #!/usr/bin/env sh
 
-docker build -t astrocontainer:latest .
+docker build -t {{cookiecutter.container_name}}:latest .

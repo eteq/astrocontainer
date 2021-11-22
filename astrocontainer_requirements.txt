@@ -1,3 +1,4 @@
+# this requirements file is shared across all "astrocontainer" instances
 astropy
 astroquery
 numpy
