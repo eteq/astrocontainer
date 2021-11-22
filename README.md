@@ -1,8 +1,9 @@
 # astrocontainer
 
-Basic workflow:
+This is a cookiecutter template to easily create project-based containers for astronomy-related work (with a focus on a Python-based software stack).
 
-1. Copy (TODO: cookiecutterize)
-2. update `requirements.txt` with known needed requirements
-3. `sh build_container.sh`
-n. `sh run_container*.sh` and work in `content` dir
+To use this template, you must have [cookiecutter](https://cookiecutter.readthedocs.io/) installed.  Then do::
+
+  % cookiecutter astrcontainer
+
+And follow the prompts. Once this is done, go into the generated directory, update the `requirements.txt` with project-specific requirements, and then follow the instructions in the project directory README.
