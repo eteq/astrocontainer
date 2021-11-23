@@ -1,4 +1,4 @@
 {
-    "content_dir": "content",
-    "container_name": "exampleastrocontainer"
+    "container_name": "exampleastrocontainer",
+    "content_dir": "content"
 }

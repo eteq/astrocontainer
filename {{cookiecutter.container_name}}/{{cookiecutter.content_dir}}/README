@@ -1,1 +1,3 @@
-This directory contains the actual project itself, and is meant to be mounted in docker in its own space
+This directory contains the actual project itself, and is meant to be mounted in the container so that it can persist if the container is deleted.  (If you don't know what that means, that's OK.  Just put .py / .ipynb / whatever files here.)
+
+Data files should go into the `data` directory, which exists to be ignored by version control.

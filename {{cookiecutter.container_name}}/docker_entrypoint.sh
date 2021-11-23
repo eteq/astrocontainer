@@ -16,7 +16,8 @@ fi
 addgroup --gid "$HOST_GID" matchinguser
 adduser --uid "$HOST_UID" --gid "$HOST_GID" --gecos "" --disabled-password {{cookiecutter.container_name}}er
 
-cd /home/{{cookiecutter.container_name}}
+cd /home/{{cookiecutter.container_name}}er
+ln -s /containerapp/{{cookiecutter.content_dir}}
 
 # Drop privileges and execute next container command, or 'bash' if not specified. 
 if [[ $# -gt 0 ]]; then
