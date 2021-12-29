@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+
+echo "REPLACE $0 with a symlink to whatever container executable you want"
