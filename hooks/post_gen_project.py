@@ -2,7 +2,7 @@ import os
 import sys
 
 REMOVE_PATHS = [
-    '{% if cookiecutter.containerexec_link != "containerexec_link" %} containerexec_link {% endif %}',
+    '{% if cookiecutter.container_executable != "containerexec_link" %} containerexec_link {% endif %}',
 ]
 
 for path in REMOVE_PATHS:
