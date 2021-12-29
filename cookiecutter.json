@@ -1,4 +1,5 @@
 {
     "container_name": "exampleastrocontainer",
-    "content_dir": "content"
+    "content_dir": "content",
+    "container_executable": ["docker", "podman"]
 }
