@@ -11,7 +11,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 # for jupyter
 EXPOSE 8888 
 
-COPY docker_entrypoint.sh /containerapp/
-ENTRYPOINT ["/containerapp/docker_entrypoint.sh"]
+COPY entrypoint_script.sh /containerapp/
+ENTRYPOINT ["/containerapp/entrypoint_script.sh"]
 
 CMD [ "python" ]
