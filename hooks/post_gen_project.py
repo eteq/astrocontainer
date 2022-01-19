@@ -12,3 +12,8 @@ for path in REMOVE_PATHS:
             os.rmdir(path)
         else:
             os.unlink(path)
+
+{% if cookiecutter.container_executable == "podman" %}
+if os.path.exists('Dockerfile'):
+    os.rename('Dockerfile', 'Containerfile')
+{% endif %}
