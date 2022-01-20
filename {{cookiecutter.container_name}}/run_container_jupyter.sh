@@ -19,3 +19,8 @@ $CONTAINER_EXEC run -it --rm --privileged \
            -p $EXTERNALPORT:8888 \
            {{cookiecutter.container_name}} \
            jupyter lab  --ip="0.0.0.0" --notebook-dir="{{cookiecutter.content_dir}}" --LabApp.user_settings_dir="{{cookiecutter.content_dir}}/.jupyter_config/user-settings" --LabApp.workspaces_dir="{{cookiecutter.content_dir}}/.jupyter_config/workspaces" --allow-root 
+
+if [ $? -eq 126 ]
+then
+  echo "If the failure above was due to a port not being available, try explicitly requesting a free port like \"./run_container_jupyter 8899\""
+fi
