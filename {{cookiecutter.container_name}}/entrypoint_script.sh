@@ -34,15 +34,15 @@ ln -s /containerapp/{{cookiecutter.content_dir}}
 if [ $1 = "bashroot" ]; then
     # if first argument is bashroot, go to shell as root even if the user is set up
     bash
-fi
-
-if [ "$stay_root" = true ] ; then
-    exec "$@"
 else
-    # Drop privileges and execute next container command, or 'bash' if not specified. 
-    if [[ $# -gt 0 ]]; then
-        exec sudo -u {{cookiecutter.container_name}}er -- "$@"
+    if [ "$stay_root" = true ] ; then
+        exec "$@"
     else
-        exec sudo -u {{cookiecutter.container_name}}er -- bash
+        # Drop privileges and execute next container command, or 'bash' if not specified. 
+        if [[ $# -gt 0 ]]; then
+            exec sudo -u {{cookiecutter.container_name}}er -- "$@"
+        else
+            exec sudo -u {{cookiecutter.container_name}}er -- bash
+        fi
     fi
 fi
