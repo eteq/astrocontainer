@@ -38,9 +38,9 @@ else
     if [ "$stay_root" = true ] ; then
         exec "$@"
     else
-        # Drop privileges and execute next container command, or 'bash' if not specified. 
+        # Drop privileges and execute next container command in bash, or 'bash' if not specified. 
         if [[ $# -gt 0 ]]; then
-            exec sudo -u {{cookiecutter.container_name}}er -- "$@"
+            exec sudo -u {{cookiecutter.container_name}}er -- bash -c "$@"
         else
             exec sudo -u {{cookiecutter.container_name}}er -- bash
         fi
