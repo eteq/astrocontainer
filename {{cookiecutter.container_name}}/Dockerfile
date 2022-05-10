@@ -5,8 +5,8 @@ RUN /bin/sh -c set -ex; apt-get update; apt-get install -y --no-install-recommen
 WORKDIR /containerapp
 
 COPY *requirements.txt ./
-RUN pip install --no-cache-dir -r astrocontainer_requirements.txt
-RUN pip install --no-cache-dir -r requirements.txt
+RUN --mount=type=cache,target=/root/.cache pip install -r astrocontainer_requirements.txt
+RUN --mount=type=cache,target=/root/.cache pip install -r requirements.txt
 
 # for jupyter
 EXPOSE 8888 
