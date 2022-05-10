@@ -1,5 +1,6 @@
 {
     "container_name": "exampleastrocontainer",
     "content_dir": "content",
-    "container_executable": ["docker", "podman", "containerexec_link"]
+    "container_executable": ["docker", "podman", "containerexec_link"],
+    "initialize_git": ["no", "yes"]
 }
