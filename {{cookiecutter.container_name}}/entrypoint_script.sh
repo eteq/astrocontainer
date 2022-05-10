@@ -31,7 +31,7 @@ fi
 
 ln -s /containerapp/{{cookiecutter.content_dir}}
 
-if [ $1 = "bashroot" ]; then
+if [ "$1" = "bashroot" ] ; then
     # if first argument is bashroot, go to shell as root even if the user is set up
     bash
 else
