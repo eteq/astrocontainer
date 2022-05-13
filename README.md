@@ -1,6 +1,6 @@
 # astrocontainer
 
-This is a cookiecutter template to easily create project-based containers for astronomy-related work (with a focus on a Python-based software stack).
+This is a cookiecutter template to easily create project-based containers for astronomy-related work (with a focus on a Python-based software stack). While of general use, this template focuses particularly on a container layout that promotes replicability via defined software in the container while maintaining flexibility by keeping the project content (e.g. Python scripts, Jupyter notebooks, large data files) on a host directory.
 
 To use this template, you must have [cookiecutter](https://cookiecutter.readthedocs.io/) installed.  Then do:
 ```
