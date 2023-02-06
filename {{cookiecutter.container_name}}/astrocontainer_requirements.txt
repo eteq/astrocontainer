@@ -7,3 +7,4 @@ matplotlib
 ipython
 jupyter
 jupyterlab
+tqdm
