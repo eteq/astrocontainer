@@ -9,6 +9,10 @@ RUN --mount=type=cache,target=/root/.cache pip install -r astrocontainer_require
 COPY requirements.txt ./
 RUN --mount=type=cache,target=/root/.cache pip install -r requirements.txt
 
+#ANY CUSTOM SETUP COMMANDS SHOULD GO HERE:
+# RUN ...
+#EMD
+
 # for jupyter
 EXPOSE 8888 
 
