@@ -39,7 +39,8 @@ else
         exec "$@"
     else
         # Drop privileges and execute next container command in bash, or 'bash' if not specified. 
-        if [[ $# -gt 0 ]]; then
+        export HOME= /home/{{cookiecutter.container_name}}er
+	if [[ $# -gt 0 ]]; then
             exec sudo -E -u {{cookiecutter.container_name}}er -- bash -c "$@"
         else
             exec sudo -E -u {{cookiecutter.container_name}}er -- bash
