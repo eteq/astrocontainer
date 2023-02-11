@@ -40,9 +40,9 @@ else
     else
         # Drop privileges and execute next container command in bash, or 'bash' if not specified. 
         if [[ $# -gt 0 ]]; then
-            exec sudo -u {{cookiecutter.container_name}}er -- bash -c "$@"
+            exec sudo -E -u {{cookiecutter.container_name}}er -- bash -c "$@"
         else
-            exec sudo -u {{cookiecutter.container_name}}er -- bash
+            exec sudo -E -u {{cookiecutter.container_name}}er -- bash
         fi
     fi
 fi
