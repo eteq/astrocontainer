@@ -4,4 +4,4 @@ CONTAINER_EXEC=`dirname $0`/{{cookiecutter.container_executable}}
 {% else %}
 CONTAINER_EXEC={{cookiecutter.container_executable}}
 {% endif %}
-$CONTAINER_EXEC build -t {{cookiecutter.container_name}}:latest .
+$CONTAINER_EXEC build -t {{cookiecutter.container_name}}:latest . "$@"
